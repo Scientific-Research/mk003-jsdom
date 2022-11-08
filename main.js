@@ -1,8 +1,13 @@
 // console.log("Javascript Works!");
 const messageElem = document.querySelector(".message");
-const changeTextButtonElem = document.querySelector(".changeTextButton");
-const userTextElem = document.querySelector(".userText");
-userTextElem.focus();
+
+const changeText1ButtonElem = document.querySelector(".changeText1Button");
+const changeText2ButtonElem = document.querySelector(".changeText2Button");
+
+const userText1Elem = document.querySelector(".userText1");
+const userText2Elem = document.querySelector(".userText2");
+
+userText1Elem.focus();
 
 console.log(messageElem);
 
@@ -10,9 +15,9 @@ messageElem.innerText = "Initial Text";
 
 const changeText = () => {
   //   messageElem.innerText = "The Button was clicked! ";
-  messageElem.innerText = userTextElem.value;
-  userTextElem.value = "";
-  userTextElem.focus();
+  messageElem.innerText = userText1Elem.value;
+  userText1Elem.value = "";
+  userText1Elem.focus();
 };
 
 // changeTextButtonElem.addEventListener("click", () => {
@@ -21,7 +26,7 @@ const changeText = () => {
 //   messageElem.innerText = "the button was clicked";
 // });
 
-changeTextButtonElem.addEventListener("click", changeText);
+changeText1ButtonElem.addEventListener("click", changeText);
 //   console.log("button was clicked");
 //   messageElem.innerHTML = "the <b>button</b> was clicked";
 //   messageElem.innerText = "the button was clicked";
@@ -30,7 +35,7 @@ changeTextButtonElem.addEventListener("click", changeText);
 //     console.log('Works');
 // }
 
-userTextElem.addEventListener("keypress", (e) => {
+userText1Elem.addEventListener("keypress", (e) => {
   if (e.keyCode === 13) {
     // messageElem.innerText = "Enter Key was pressed";
     changeText();

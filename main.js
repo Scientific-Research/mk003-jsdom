@@ -8,7 +8,10 @@ console.log(messageElem);
 messageElem.innerText = "Initial Text";
 
 const changeText = () => {
-  messageElem.innerText = "The Button was clicked! ";
+  //   messageElem.innerText = "The Button was clicked! ";
+  messageElem.innerText = userTextElem.value;
+  userTextElem.value = "";
+  userTextElem.focus();
 };
 
 // changeTextButtonElem.addEventListener("click", () => {

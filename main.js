@@ -1,5 +1,6 @@
 // console.log("Javascript Works!");
-const messageElem = document.querySelector(".message");
+const message1Elem = document.querySelector(".message1");
+const message2Elem = document.querySelector(".message2");
 
 const changeText1ButtonElem = document.querySelector(".changeText1Button");
 const changeText2ButtonElem = document.querySelector(".changeText2Button");
@@ -9,13 +10,13 @@ const userText2Elem = document.querySelector(".userText2");
 
 userText1Elem.focus();
 
-console.log(messageElem);
+console.log(message1Elem);
 
-messageElem.innerText = "Initial Text";
+// message1Elem.innerText = "Initial Text";
 
 const changeText = () => {
   //   messageElem.innerText = "The Button was clicked! ";
-  messageElem.innerText = userText1Elem.value;
+  message1Elem.innerText = userText1Elem.value;
   userText1Elem.value = "";
   userText1Elem.focus();
 };

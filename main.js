@@ -2,6 +2,7 @@
 const messageElem = document.querySelector(".message");
 const changeTextButtonElem = document.querySelector(".changeTextButton");
 const userTextElem = document.querySelector(".userText");
+userTextElem.focus();
 
 console.log(messageElem);
 

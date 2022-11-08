@@ -16,3 +16,6 @@ messageElem.innerText = "Initial Text";
 //     console.log('Works');
 // }
 
+const changeText = () => {
+  messageElem.innerText = "The Button was clicked!";
+};

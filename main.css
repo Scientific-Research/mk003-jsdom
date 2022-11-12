@@ -7,3 +7,11 @@ body {
 .row {
   margin-bottom: 1rem;
 }
+
+.hidden {
+  display: none;
+}
+
+hr {
+  margin-top: 1rem;
+}

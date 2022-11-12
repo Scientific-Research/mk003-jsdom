@@ -1,13 +1,20 @@
 // console.log("Javascript Works!");
 const message1Elem = document.querySelector(".message1");
 const message2Elem = document.querySelector(".message2");
-
-const changeText1ButtonElem = document.querySelector(".changeText1Button");
-const changeText2ButtonElem = document.querySelector(".changeText2Button");
-
 const userText1Elem = document.querySelector(".userText1");
 const userText2Elem = document.querySelector(".userText2");
+const changeText1ButtonElem = document.querySelector(".changeText1Button");
+const changeText2ButtonElem = document.querySelector(".changeText2Button");
+const toggleAnswerButtonElem = document.querySelector(".toggleAnswerButton");
+const buttonSituation = document.querySelector(".buttonSituation");
 
+// Flashcards
+
+toggleAnswerButtonElem.addEventListener("click", () => {
+  console.log("toggle");
+  buttonSituation.innerText = "Clicked";
+});
+//DOM JS TEXT
 userText1Elem.focus();
 
 console.log(message1Elem);

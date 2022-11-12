@@ -1,3 +1,5 @@
+// import axios from "axios";
+// import axios from 'axios';
 // console.log("Javascript Works!");
 const message1Elem = document.querySelector(".message1");
 const message2Elem = document.querySelector(".message2");
@@ -97,36 +99,45 @@ userText2Elem.addEventListener("keypress", (e) => {
   //   console.log(e);
 });
 
-const scores = [
-  {
-    user: "EJT",
-    score: "01842",
-  },
-  {
-    user: "PPB",
-    score: "01812",
-  },
-  {
-    user: "EJT",
-    score: "01482",
-  },
-  {
-    user: "KZF",
-    score: "02346",
-  },
-];
+// const scores = [
+//   {
+//     user: "EJT",
+//     score: "01842",
+//   },
+//   {
+//     user: "PPB",
+//     score: "01812",
+//   },
+//   {
+//     user: "EJT",
+//     score: "01482",
+//   },
+//   {
+//     user: "KZF",
+//     score: "02346",
+//   },
+// ];
+
+(async () => {
+  const urlAPI = "https://testapi.tkserv.eu/scores";
+
+  const response = await fetch(urlAPI);
+  const scoreData = await response.json();
+  console.log(scoreData);
+  // return scoreData;
+  const User = document.querySelector(".user");
+  User.innerText = scoreData
+    .map((score) => {
+      const scoreData = `${score.user} -- ${score.score}
+      `;
+      console.log(scoreData);
+      return scoreData;
+    })
+    .join("");
+})();
+// // const Score = document.querySelector(".score");
 
 // Scores
-const User = document.querySelector(".user");
-User.innerText = scores
-  .map((score) => {
-    const scoreData = `${score.user} -- ${score.score}
-    `;
-    console.log(scoreData);
-    return scoreData;
-  })
-  .join("");
-// // const Score = document.querySelector(".score");
 
 // const getFullScoreInformation = (score) => {
 //   return [score.user, score.score].join(" ");

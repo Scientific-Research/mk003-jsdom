@@ -6,13 +6,15 @@ const userText2Elem = document.querySelector(".userText2");
 const changeText1ButtonElem = document.querySelector(".changeText1Button");
 const changeText2ButtonElem = document.querySelector(".changeText2Button");
 const toggleAnswerButtonElem = document.querySelector(".toggleAnswerButton");
-const buttonSituation = document.querySelector(".buttonSituation");
+// const buttonSituation = document.querySelector(".buttonSituation");
 
+const answerElem = document.querySelector(".answer");
 // Flashcards
 
 toggleAnswerButtonElem.addEventListener("click", () => {
   console.log("toggle");
-  buttonSituation.innerText = "Clicked";
+  answerElem.classList.toggle("hidden");
+  // buttonSituation.innerText = "Clicked";
 });
 //DOM JS TEXT
 userText1Elem.focus();

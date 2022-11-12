@@ -15,3 +15,9 @@ body {
 hr {
   margin-top: 1rem;
 }
+
+.user {
+  width: 100px;
+  background-color: #222;
+  text-align: center;
+}

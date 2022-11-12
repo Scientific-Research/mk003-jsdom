@@ -6,9 +6,9 @@ const userText2Elem = document.querySelector(".userText2");
 const changeText1ButtonElem = document.querySelector(".changeText1Button");
 const changeText2ButtonElem = document.querySelector(".changeText2Button");
 const toggleAnswerButtonElem = document.querySelector(".toggleAnswerButton");
-// const buttonSituation = document.querySelector(".buttonSituation");
 
 const answerElem = document.querySelector(".answer");
+
 // Flashcards
 
 toggleAnswerButtonElem.addEventListener("click", () => {
@@ -96,3 +96,39 @@ userText2Elem.addEventListener("keypress", (e) => {
   //   console.log("Keyup was pressed.");
   //   console.log(e);
 });
+
+const scores = [
+  {
+    user: "EJT",
+    score: "01842",
+  },
+  {
+    user: "PPB",
+    score: "01812",
+  },
+  {
+    user: "EJT",
+    score: "01482",
+  },
+  {
+    user: "KZF",
+    score: "02346",
+  },
+];
+
+// Scores
+const User = document.querySelector(".user");
+User.innerText = scores
+  .map((score) => {
+    const scoreData = `${score.user} -- ${score.score}
+    `;
+    console.log(scoreData);
+    return scoreData;
+  })
+  .join("");
+// // const Score = document.querySelector(".score");
+
+// const getFullScoreInformation = (score) => {
+//   return [score.user, score.score].join(" ");
+// };
+// User.innerText = scores.map(getFullScoreInformation);

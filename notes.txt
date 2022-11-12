@@ -1,0 +1,6 @@
+- create score array
+- display score array
+- display with string template
+- display with createElement
+
+- convert to modules
